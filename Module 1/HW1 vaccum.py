@@ -41,7 +41,7 @@ if user_in.lower() in [s.lower() for s in shapes]:
     
 else:
     print("Invalid shape please enter vaild shape from the given list")
-    break
+    
 
 
 
