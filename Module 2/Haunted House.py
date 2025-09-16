@@ -69,7 +69,7 @@ class Pathfinder:
                     h = self.heuristic(neighbor, heuristic_type)
                     heapq.heappush(open_set, (h, neighbor))
                     
-        return None, nodes_explored  # No path found
+        return None, nodes_explored  
 
     def a_star(self, heuristic_type="manhattan"):
         open_set = []
@@ -95,7 +95,7 @@ class Pathfinder:
                     f_score[neighbor] = tentative_g + self.heuristic(neighbor, heuristic_type)
                     heapq.heappush(open_set, (f_score[neighbor], neighbor))
                     
-        return None, nodes_explored  # No path found
+        return None, nodes_explored  
 
     def reconstruct_path(self, came_from):
         current = self.goal
@@ -109,32 +109,36 @@ class Pathfinder:
         return path
 
     def print_results(self, algorithm, heuristic_type, path, nodes_explored):
+
         path_length = len(path) - 1 if path else "N/A"
+
         print(f"{algorithm} with {heuristic_type} heuristic:")
         print(f"  Path length: {path_length}")
         print(f"  Nodes explored: {nodes_explored}")
+
         if path:
             print(f"  Path: {path}")
         else:
             print("  No path found")
         print()
 
-# Example grid
+
+#Grid with S: Start, G: Goal, 1: Wall, 0: Open 
+
 grid = [
-        ['S', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-        ['O', '1', '1', 'O', '1', '1', '1', 'O'],
-        ['O', '1', 'O', 'O', 'O', 'O', '1', 'O'],
-        ['O', '1', 'O', '1', '1', 'O', '1', 'O'],
-        ['O', 'O', 'O', '1', 'G', 'O', 'O', 'O'],
-        ['O', '1', 'O', '1', '1', '1', '1', 'O'],
-        ['O', '1', 'O', 'O', 'O', 'O', 'O', 'O'],
-        ['O', 'O', 'O', '1', '1', '1', '1', 'O']
+        ['S', '0', '0', '0', '0', '0', '0', '0'],
+        ['0', '1', '1', '0', '1', '1', '1', '0'],
+        ['0', '1', '0', '0', '0', '0', '1', '0'],
+        ['0', '1', '0', '1', '1', '0', '1', '0'],
+        ['0', '0', '0', '1', 'G', '0', '0', '0'],
+        ['0', '1', '0', '1', '1', '1', '1', '0'],
+        ['0', '1', '0', '0', '0', '0', '0', '0'],
+        ['0', '0', '0', '1', '1', '1', '1', '0']
     ]
 
-# Create pathfinder instance
 pf = Pathfinder(grid)
 
-# Test all algorithms and heuristics
+# Testing all algorithms and heuristics
 heuristics = ["manhattan", "euclidean", "diagonal"]
 
 for h in heuristics:
