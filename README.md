@@ -34,8 +34,6 @@ DFS: Depth-first exploration of paths
 UCS: Finds least-cost path using actual distances
 A*: Optimal pathfinding using distance heuristic
 
-Usage
-Run any of the UI files:
 
 # Basic prototype
 python UI_prototype.py
@@ -61,5 +59,4 @@ Python 3.x
 tkinter
 Standard libraries (collections, queue, math)
 Documentation
-Week 1 Report: Project planning and requirements
 Campus maps and visualizations in image files
