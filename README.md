@@ -1,8 +1,8 @@
-Chanakya Navigator
+#Chanakya Navigator
 A campus navigation system using AI search algorithms to help students, faculty, and visitors navigate Chanakya University campus.
 
-Project Structure
-EAI_201/
+#Project Structure
+
 ├── Algorithm Files
 │   ├── BFS.py                # Breadth-First Search implementation
 │   ├── DFS.py                # Depth-First Search implementation 
