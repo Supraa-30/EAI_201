@@ -1,8 +1,8 @@
-Chanakya Navigator
-A campus navigation system using AI search algorithms to help students, faculty, and visitors navigate Chanakya University campus.
+# Chanakya Navigator
+ A campus navigation system using AI search algorithms to help students, faculty, and visitors navigate Chanakya University campus.
 
-Project Structure
-EAI_201/
+# Project Structure
+
 ├── Algorithm Files
 │   ├── BFS.py                # Breadth-First Search implementation
 │   ├── DFS.py                # Depth-First Search implementation 
@@ -15,12 +15,10 @@ EAI_201/
 │   └── Chatbot.py           # Chatbot interface implementation
 ├── Data Files
 │   └── Buildings.py         # Campus graph and building data
-├ 
 │   ├── Week1 Report.md      # Project planning document
 │   └── README.md            # Project documentation
-└
-    ├── Campus Location.png  # Campus map
-    └── Campus_graph.png     # Graph visualization
+└├── Campus Location.png  # Campus map
+ └── Campus_graph.png     # Graph visualization
 
 Features
 Multiple pathfinding algorithms (BFS, DFS, UCS, A*)
@@ -35,8 +33,7 @@ BFS: Finds shortest path in terms of steps
 DFS: Depth-first exploration of paths
 UCS: Finds least-cost path using actual distances
 A*: Optimal pathfinding using distance heuristic
-Usage
-Run any of the UI files:
+
 
 # Basic prototype
 python UI_prototype.py
@@ -62,5 +59,4 @@ Python 3.x
 tkinter
 Standard libraries (collections, queue, math)
 Documentation
-Week 1 Report: Project planning and requirements
 Campus maps and visualizations in image files
